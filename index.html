@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Meu Primeiro Projeto GitHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Descomplica</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para o corpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #FFF176, #FFD54F); /* Degradê amarelo */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que a página ocupe a altura total da janela */
+        }
+
+        /* Texto do cabeçalho */
+        .header-text {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000;
+            background: #FFC107;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        /* Imagem principal */
+        .banner {
+            flex: 1; /* Faz com que a imagem ocupe o espaço disponível */
+            width: 100%;
+            background-image: url("images/image-desktop.png"); /* Imagem para desktop */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Responsividade para smartphones */
+        @media (max-width: 768px) {
+            .banner {
+                background-image: url("images/image-mobile.png"); /* Imagem otimizada para mobile */
+            }
+        }
+
+        /* Rodapé */
+        .footer {
+            background: #2b2a27; /* Vermelho forte */
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Link no rodapé */
+        .footer a {
+            color: #FFC107;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #FFF;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao meu projeto!</h1>
-    <p>Este é um projeto de exemplo para a prática de Git e GitHub.</p>
+    <!-- Texto do cabeçalho (header) -->
+    <div class="header-text">Bem-vindo à Lanchonete Descomplica!</div>
+
+    <!-- Imagem principal -->
+    <div class="banner"></div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        © 2024 Lanchonete Descomplica. Todos os direitos reservados. 
+        <br>
+        <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+    </div>
 </body>
 </html>
